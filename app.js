@@ -1,9 +1,10 @@
-window.navigator.geolocation.watchPosition(function (data10) {
+window.navigator.geolocation.getCurrentPosition(function (data) {
+(function (data10) {
     let latitude1;
     latitude1 = data10.coords.latitude;
     var longitude1;
     longitude1 = data10.coords.longitude;
-    window.navigator.geolocation.clearWatch(1);
+    //window.navigator.geolocation.clearWatch(1);
     // console.log(latitude1);
     // console.log(longitude1);
     alert("Your Latitude position is: "+ latitude1);
