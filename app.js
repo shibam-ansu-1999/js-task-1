@@ -4,10 +4,10 @@ window.navigator.geolocation.watchPosition(function (data) {
     var longitude1;
     longitude1 = data.coords.longitude;
     window.navigator.geolocation.clearWatch(1);
-    console.log(latitude1);
-    console.log(longitude1);
-    alert(latitude1);
-    alert(longitude1);
+    // console.log(latitude1);
+    // console.log(longitude1);
+    alert("Your Latitude position is: "+ latitude1);
+    alert("Your Longitude posiion is: "+longitude1);
 
     fetch("https://api.opencagedata.com/geocode/v1/json?key=99b9206f968840608ec76f2da3d48a9d&q=" + latitude1 + "+" + longitude1 + "&pretty=1&no_annotations=1")
         .then(response => response.json())
