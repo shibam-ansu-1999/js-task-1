@@ -3,7 +3,7 @@ window.navigator.geolocation.watchPosition(function (data) {
     latitude1 = data.coords.latitude;
     var longitude1;
     longitude1 = data.coords.longitude;
-    window.navigator.geolocation.clearWatch(1);
+    window.navigator.geolocation.clearWatch();
     // console.log(latitude1);
     // console.log(longitude1);
     alert("Your Latitude position is: "+ latitude1);
