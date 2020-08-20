@@ -24,6 +24,16 @@ window.navigator.geolocation.getCurrentPosition(function (data) {
             p4.append(continent);
             p5.append(city+' | '+state+' | '+country+' | '+continent);
 
+            let p11 = document.getElementById("city1");
+            let p12 = document.getElementById("state1");
+            let p13 = document.getElementById("country1");
+            let p14 = document.getElementById("continent1");
+
+            p11.append(city);
+            p12.append(state);
+            p13.append(country);
+            p14.append(continent);
+
 
             var img = document.createElement("img");
             img.src = "https://api.tomtom.com/map/1/staticimage?layer=basic&style=main&format=png&zoom=7&center="+ longitude +"%2C"+ latitude+"&width=400&height=250&view=IN&key=33ZTQWd0AvI0xHSTIN7fcUpax8Gdl5QT";
@@ -41,7 +51,11 @@ window.navigator.geolocation.getCurrentPosition(function (data) {
                 img.src = city_pic; 
                 var src = document.getElementById("city_pic"); 
                 src.append(img); 
-                console.log(city_pic);
+                var img1 = document.createElement("img"); 
+                img1.src = city_pic; 
+                var src1 = document.getElementById("city_pic1"); 
+                src1.append(img1); 
+            
             });
 
             fetch("https://api.unsplash.com/photos/random?query="+ state +"&client_id=Ks_hJ_xWcKF34syVSBj4asVPVuy8f0yA7ka01aeUQ9o")
@@ -52,8 +66,12 @@ window.navigator.geolocation.getCurrentPosition(function (data) {
                 var img = document.createElement("img"); 
                 img.src = state_pic; 
                 var src = document.getElementById("state_pic"); 
-                src.append(img); 
-                console.log(state_pic);
+                src.append(img);
+                var img1 = document.createElement("img"); 
+                img1.src = state_pic; 
+                var src1 = document.getElementById("state_pic1"); 
+                src1.append(img1); 
+            
             });
 
             fetch("https://api.unsplash.com/photos/random?query="+ country +"&client_id=Ks_hJ_xWcKF34syVSBj4asVPVuy8f0yA7ka01aeUQ9o")
@@ -64,8 +82,12 @@ window.navigator.geolocation.getCurrentPosition(function (data) {
                 var img = document.createElement("img"); 
                 img.src = country_pic; 
                 var src = document.getElementById("country_pic"); 
-                src.append(img); 
-                console.log(country_pic);
+                src.append(img);
+                var img1 = document.createElement("img"); 
+                img1.src = country_pic;
+                var src1 = document.getElementById("country_pic1"); 
+                src1.append(img1); 
+            
             });
 
             fetch("https://api.unsplash.com/photos/random?query="+ continent +"&client_id=Ks_hJ_xWcKF34syVSBj4asVPVuy8f0yA7ka01aeUQ9o")
@@ -76,8 +98,12 @@ window.navigator.geolocation.getCurrentPosition(function (data) {
                 var img = document.createElement("img"); 
                 img.src = continent_pic; 
                 var src = document.getElementById("continent_pic"); 
-                src.append(img); 
-                console.log(continent_pic);
+                src.append(img);
+                var img1 = document.createElement("img"); 
+                img1.src = continent_pic; 
+                var src1 = document.getElementById("continent_pic1"); 
+                src1.append(img1); 
+
             });
 
         });

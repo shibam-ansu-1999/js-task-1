@@ -48,7 +48,7 @@ h1 div{
     padding: 0px;
 }
 
-.container{
+.container1{
     margin-top: 20px;
     padding-bottom: 30px;
     display: grid;
@@ -59,6 +59,22 @@ h1 div{
     grid-template-rows: auto auto 300px;
     grid-template-columns: repeat(4,23%);
 }
+.container2{
+    margin-top: 20px;
+    padding-bottom: 30px;
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    grid-gap: 10px;
+    grid-column-gap:20px;
+    grid-template-rows: auto auto 200px auto auto 200px;
+    grid-template-columns: repeat(2,45%);
+}
+.mob{
+    margin-top:25px;
+}
+
 .box{
     font-size: 40px;
     animation: blink-animation 1s steps(5, start) infinite;
@@ -97,10 +113,11 @@ img{
     .b1, #location{
         font-size:13px;
     }
-    .container{
-        grid-gap: 12px;
-        grid-template-rows: auto auto 100px;
-        grid-template-columns: repeat(4,22%);
+    .container1{
+       display: none;
+    }
+    .container2{
+        display: grid;
     }
 }
 @media(min-width:769px) and (max-width: 1023px){
@@ -110,7 +127,7 @@ img{
     .b1, #location{
         font-size:18px;
     }
-    .container{
+    .container1{
         grid-gap: 11px;
         grid-template-rows: auto auto 200px;
         grid-template-columns: repeat(4,22.5%);
