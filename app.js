@@ -1,8 +1,8 @@
-navigator.geolocation.watchPosition(function (data) {
+navigator.geolocation.watchPosition(function (data10) {
     let latitude1;
-    latitude1 = data.coords.latitude;
+    latitude1 = data10.coords.latitude;
     var longitude1;
-    longitude1 = data.coords.longitude;
+    longitude1 = data10.coords.longitude;
     window.navigator.geolocation.clearWatch(1);
     // console.log(latitude1);
     // console.log(longitude1);
