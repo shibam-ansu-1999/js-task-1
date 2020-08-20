@@ -5,7 +5,8 @@ navigator.geolocation.getCurrentPosition(function (data) {
     longitude1 = data.coords.longitude;
     console.log(latitude1);
     console.log(longitude1);
-
+    alert(latitude1);
+    alert(longitude1);
 
     fetch("https://api.opencagedata.com/geocode/v1/json?key=99b9206f968840608ec76f2da3d48a9d&q=" + latitude1 + "+" + longitude1 + "&pretty=1&no_annotations=1")
         .then(response => response.json())
