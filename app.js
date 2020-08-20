@@ -1,6 +1,8 @@
 navigator.geolocation.getCurrentPosition(function (data) {
-    var latitude1 = data.coords.latitude;
-    var longitude1 = data.coords.longitude;
+    let latitude1;
+    latitude1 = data.coords.latitude;
+    var longitude1
+    longitude1 = data.coords.longitude;
     console.log(latitude1);
     console.log(longitude1);
 
