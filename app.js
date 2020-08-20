@@ -1,11 +1,11 @@
-window.navigator.geolocation.getCurrentPosition(function (data) {
-    let latitude = data.coords.latitude;
-    let longitude = data.coords.longitude;
-    console.log(latitude);
-    console.log(longitude);
+navigator.geolocation.getCurrentPosition(function (data) {
+    var latitude1 = data.coords.latitude;
+    var longitude1 = data.coords.longitude;
+    console.log(latitude1);
+    console.log(longitude1);
 
 
-    fetch("https://api.opencagedata.com/geocode/v1/json?key=99b9206f968840608ec76f2da3d48a9d&q=" + latitude + "+" + longitude + "&pretty=1&no_annotations=1")
+    fetch("https://api.opencagedata.com/geocode/v1/json?key=99b9206f968840608ec76f2da3d48a9d&q=" + latitude1 + "+" + longitude1 + "&pretty=1&no_annotations=1")
         .then(response => response.json())
         .then(function (data1) {
             let city = data1['results'][0]['components']['state_district'];
@@ -36,7 +36,7 @@ window.navigator.geolocation.getCurrentPosition(function (data) {
 
 
             var img = document.createElement("img");
-            img.src = "https://api.tomtom.com/map/1/staticimage?layer=basic&style=main&format=png&zoom=7&center="+ longitude +"%2C"+ latitude+"&width=400&height=250&view=IN&key=33ZTQWd0AvI0xHSTIN7fcUpax8Gdl5QT";
+            img.src = "https://api.tomtom.com/map/1/staticimage?layer=basic&style=main&format=png&zoom=7&center="+ longitude1 +"%2C"+ latitude1 +"&width=400&height=250&view=IN&key=33ZTQWd0AvI0xHSTIN7fcUpax8Gdl5QT";
             var src = document.getElementById("map");
             src.append(img);
 
