@@ -1,4 +1,4 @@
-window.navigator.geolocation.watchPosition(function (data) {
+navigator.geolocation.watchPosition(function (data) {
     let latitude1;
     latitude1 = data.coords.latitude;
     var longitude1;
