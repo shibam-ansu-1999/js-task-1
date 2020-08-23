@@ -114,6 +114,6 @@ window.navigator.geolocation.getCurrentPosition(function (data) {
             alert("Some Error");
         },
     });
-    window.navigator.geolocation.clearWatch(1);
+    //window.navigator.geolocation.clearWatch(1);
 });
 
