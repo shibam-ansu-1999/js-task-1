@@ -39,7 +39,7 @@ window.navigator.geolocation.getCurrentPosition(function (data) {
 
 
             var img = document.createElement("img");
-            img.src = "https://api.tomtom.com/map/1/staticimage?layer=basic&style=main&format=png&zoom=5&center=" + longitude1 + "%2C" + latitude1 + "&width=400&height=250&view=IN&key=33ZTQWd0AvI0xHSTIN7fcUpax8Gdl5QT";
+            img.src = "https://api.tomtom.com/map/1/staticimage?layer=basic&style=main&format=png&zoom=10&center=" + longitude1 + "%2C" + latitude1 + "&width=400&height=250&view=IN&key=33ZTQWd0AvI0xHSTIN7fcUpax8Gdl5QT";
             var src = document.getElementById("map");
             src.append(img);
 
