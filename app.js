@@ -7,7 +7,7 @@ window.navigator.geolocation.getCurrentPosition(function (data) {
     console.log(longitude1);
     alert("Your Latitude position is: " + latitude1);
     alert("Your Longitude posiion is: " + longitude1);
-    
+
     $.ajax({
         'url': "https://api.opencagedata.com/geocode/v1/json?key=99b9206f968840608ec76f2da3d48a9d&q=" + latitude1 + "+" + longitude1 + "&pretty=1&no_annotations=1",
         success: function (data1) {
@@ -44,10 +44,10 @@ window.navigator.geolocation.getCurrentPosition(function (data) {
             src.append(img);
 
 
+            $.ajax({
+                'url': "https://api.unsplash.com/photos/random?query=" + city + "&client_id=Ks_hJ_xWcKF34syVSBj4asVPVuy8f0yA7ka01aeUQ9o",
 
-            fetch("https://api.unsplash.com/photos/random?query=" + city + "&client_id=Ks_hJ_xWcKF34syVSBj4asVPVuy8f0yA7ka01aeUQ9o")
-                .then(response => response.json())
-                .then(function (city_data) {
+                success: function (city_data) {
                     let city_pic = city_data['urls']['raw'];
 
                     var img = document.createElement("img");
@@ -59,11 +59,13 @@ window.navigator.geolocation.getCurrentPosition(function (data) {
                     var src1 = document.getElementById("city_pic1");
                     src1.append(img1);
 
-                });
+                },
+            });
 
-            fetch("https://api.unsplash.com/photos/random?query=" + state + "&client_id=Ks_hJ_xWcKF34syVSBj4asVPVuy8f0yA7ka01aeUQ9o")
-                .then(response => response.json())
-                .then(function (state_data) {
+            $.ajax({
+                'url': "https://api.unsplash.com/photos/random?query=" + state + "&client_id=Ks_hJ_xWcKF34syVSBj4asVPVuy8f0yA7ka01aeUQ9o",
+
+                success: function (state_data) {
                     let state_pic = state_data['urls']['raw'];
 
                     var img = document.createElement("img");
@@ -74,12 +76,13 @@ window.navigator.geolocation.getCurrentPosition(function (data) {
                     img1.src = state_pic;
                     var src1 = document.getElementById("state_pic1");
                     src1.append(img1);
+                },
+            });
 
-                });
 
-            fetch("https://api.unsplash.com/photos/random?query=" + country + "&client_id=Ks_hJ_xWcKF34syVSBj4asVPVuy8f0yA7ka01aeUQ9o")
-                .then(response => response.json())
-                .then(function (country_data) {
+            $.ajax({
+                'url': "https://api.unsplash.com/photos/random?query=" + country + "&client_id=Ks_hJ_xWcKF34syVSBj4asVPVuy8f0yA7ka01aeUQ9o",
+                success: function (country_data) {
                     let country_pic = country_data['urls']['raw'];
 
                     var img = document.createElement("img");
@@ -90,12 +93,11 @@ window.navigator.geolocation.getCurrentPosition(function (data) {
                     img1.src = country_pic;
                     var src1 = document.getElementById("country_pic1");
                     src1.append(img1);
-
-                });
-
-            fetch("https://api.unsplash.com/photos/random?query=" + continent + "&client_id=Ks_hJ_xWcKF34syVSBj4asVPVuy8f0yA7ka01aeUQ9o")
-                .then(response => response.json())
-                .then(function (continent_data) {
+                },
+            });
+            $.ajax({
+                'url': "https://api.unsplash.com/photos/random?query=" + continent + "&client_id=Ks_hJ_xWcKF34syVSBj4asVPVuy8f0yA7ka01aeUQ9o",
+                success: function (continent_data) {
                     let continent_pic = continent_data['urls']['raw'];
 
                     var img = document.createElement("img");
@@ -106,8 +108,8 @@ window.navigator.geolocation.getCurrentPosition(function (data) {
                     img1.src = continent_pic;
                     var src1 = document.getElementById("continent_pic1");
                     src1.append(img1);
-
-                });
+                },
+            });
 
         },
         error: function () {
@@ -116,4 +118,6 @@ window.navigator.geolocation.getCurrentPosition(function (data) {
     });
     //window.navigator.geolocation.clearWatch(1);
 });
+
+
 
