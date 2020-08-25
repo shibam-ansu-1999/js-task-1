@@ -2,19 +2,24 @@
     margin:0px;
     padding:0px;
 }
+a{
+	font-family: 'Oswald', sans-serif;
+	font-style: italic;
+	color: blue;
+}
+nav{
+    height: 50px;
+}
+p{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 25px;
+	color: white;
+}
 body{
-    background: url(https://ak.picdn.net/shutterstock/videos/9458099/thumb/1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#root{
-    display: block;
-    background-color: #000000a4;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:150vh;
-    width: 100%;
-}
+	background-image: url("https://www.cosmographics.co.uk/images/products/arty-political-world-map3835.png");
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}  
 
 h1 div{
     margin: auto;
@@ -93,17 +98,18 @@ h1 div{
     font-size: 25px;
 }
 
-img{
-    border:4px solid gold;
+.pic img{
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    border: 4px solid gold;
 }
 
 #map img{
     padding-top: 0px;
     width: 40%;
     border-radius: 0%;
+    border: 4px solid gold;
 }
 
 @media(max-width: 768px){
